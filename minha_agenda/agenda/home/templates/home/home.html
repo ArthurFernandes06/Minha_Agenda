@@ -1,0 +1,59 @@
+{% extends "home/base.html"%}
+
+  
+  {% block content%}
+  <style>
+    
+
+    
+
+    .button-box {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 300px;
+      margin: 80px auto;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px; /* Espaço entre os botões */
+    }
+
+    .button-box .btn {
+      background-color: white;
+      color: rgb(210, 105, 30);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      font-size: 18px;
+      width: 80%; /* Menor que 100% para não encostar */
+      text-align: center;
+    }
+
+    .button-box .btn:hover {
+      background-color: #eee;
+    }
+
+    .btn.cadastro {
+      background-color: rgb(210, 105, 30);
+      color: #eee;
+    }
+
+    .btn.cadastro:hover {
+      background-color: rgb(190, 95, 25);
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="button-box">
+    <a href="{% url 'cadastro' %}" class="btn cadastro">Cadastro</a>
+    <a href="{% url 'login' %}" class="btn">Login</a>
+  </div>
+</body>
+</html>
+{% endblock content %}

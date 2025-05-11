@@ -1,0 +1,20 @@
+{% extends "cadastro/base.html"%}
+{% block content %}
+<div class = "div1">
+<h2>Cadastro de Usuário</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Cadastrar-se</button>
+    </form>
+</div>
+<style>
+    .div1{
+        background-color: rgb(219, 205, 182);
+        border-radius: 10px;
+        max-width: 75%;
+        text-align: center; 
+        margin: 30px;
+    }
+</style>
+{% endblock content %}
